@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f1ea;
+    color: #5a4b41;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a7c4bc;
+    padding: 15px;
+}
+
+#header-logo {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+#header-logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5a4b41;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4a373;
+}
+
+#promo-banner img {
+    margin-top: 20px; /* Added margin for spacing */
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+    animation: fadeIn 2s ease;
+    margin-left: 130px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.content-item {
+    position: relative;
+    overflow: hidden;
+    width: 30%; /* Adjust the width of the container */
+    margin: 0 auto; /* Center align the articles if necessary */
+}
+
+.content-item img {
+    width: 100%; /* Image will take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.content-item:hover img {
+    transform: scale(1.05);
+}
+
+.content-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(167, 196, 188, 0.7);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.content-item:hover .content-overlay {
+    transform: translateY(0);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #a7c4bc;
+    padding: 20px;
+    color: #fff;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8em;
+}
